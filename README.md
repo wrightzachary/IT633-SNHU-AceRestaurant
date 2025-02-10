@@ -1,7 +1,6 @@
-Replace `YOUR_API_KEY` with your actual API key.
-     Add the API key from your GCP Conssole in `AndroidManifest.xml` file.
+*** Replace `YOUR_API_KEY` with your actual API key. Add the API key from your GCP Conssole in `AndroidManifest.xml` file. ***
 
-4.  **Build and Run:**
+## Build and Run:
     *   Connect an Android device or start an emulator.
     *   Click the "Run" button in Android Studio to build and run the app.
 
