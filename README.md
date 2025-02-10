@@ -17,4 +17,3 @@
     *   `drawable/`: Image resources.
     *   `values/`: String resources, styles, etc.
 *   **`app/src/main/AndroidManifest.xml`:** The application manifest file.
-* **`google-services.json`:** The file that contains the API key for the google maps API.
