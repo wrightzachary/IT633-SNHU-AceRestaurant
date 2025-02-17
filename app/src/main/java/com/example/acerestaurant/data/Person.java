@@ -6,6 +6,9 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Person class that holds the information for each person
+ */
 public class Person implements Parcelable {
     // Person Variables
     private String name;
@@ -13,69 +16,133 @@ public class Person implements Parcelable {
     private String relevantInfo;
     private int photoResId;
 
-    // Constructor
+    /**
+     * Constructor
+     * @param name
+     * @param bio
+     * @param relevantInfo
+     * @param photoResId
+     */
     public Person(String name, String bio, String relevantInfo, int photoResId) {
+
+        // Initialize the variables
         this.name = name;
         this.bio = bio;
         this.relevantInfo = relevantInfo;
         this.photoResId = photoResId;
     }
 
-    // Parcelable constructor
+    /***
+     * Constructor
+     * @param in
+     */
     protected Person(Parcel in) {
+
+        // Initialize the variables
         name = in.readString();
         bio = in.readString();
         relevantInfo = in.readString();
         photoResId = in.readInt();
     }
 
-    // Parcelable Creator
+    /**
+     * Creator
+     */
     public static final Creator<Person> CREATOR = new Creator<Person>() {
+
+        // Override method for creating a new Person object from a Parcel
         @Override
         public Person createFromParcel(Parcel in) {
+
+            // Create a new Person object from a Parcel
             return new Person(in);
         }
 
+        // Override method for creating a new array of Person objects
         @Override
         public Person[] newArray(int size) {
+
+            // Create a new array of Person objects
             return new Person[size];
         }
     };
 
-    // Getters
+    /**
+     * Getter get name
+     * @return name
+     */
     public String getName() {
+
+        // Return the name
         return name;
     }
 
+    /**
+     * getter for bio
+     * @return bio
+     */
     public String getBio() {
+
+        // Return the bio
         return bio;
     }
 
+    /**
+     * getter for relevant info
+     * @return relevantInfo
+     */
     public String getRelevantInfo() {
+
+        // Return the relevantInfo
         return relevantInfo;
     }
 
+    /**
+     * getter for photo
+     * @return photo
+     */
     public int getPhotoResId() {
+
+        // Return the photo
         return photoResId;
     }
 
-    // Parcelable methods
+    /**
+     * Parcelable Methods
+     * @return
+     */
     @Override
     public int describeContents() {
+
+        // Return 0 for compatibility with Parcelable
         return 0;
     }
 
+    /**
+     * Write to Parcel
+     * @param dest
+     * @param flags
+     */
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+
+        // Write the variables to the Parcel to be read later
         dest.writeString(name);
         dest.writeString(bio);
         dest.writeString(relevantInfo);
         dest.writeInt(photoResId);
     }
 
-    // Static method to get the list of people
+    /**
+     * Get People list
+     * @return people
+     */
     public static List<Person> getPeople() {
+
+        // Create a list of people
         List<Person> people = new ArrayList<>();
+
+        // Add the people to the list
         people.add(new Person(
                 "Savor & Co.",
                 "Savor & Co. is a visionary restaurateur known for creating exceptional dining experiences that blend innovative cuisine, hospitality, and sustainability. ",
