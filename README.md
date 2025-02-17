@@ -1,7 +1,6 @@
-Replace `YOUR_API_KEY` with your actual API key.
-     Add the API key from your GCP Conssole in `AndroidManifest.xml` file.
+*** Replace `YOUR_API_KEY` with your actual API key. Add the API key from your GCP Conssole in `AndroidManifest.xml` file. ***
 
-4.  **Build and Run:**
+## Build and Run:
     *   Connect an Android device or start an emulator.
     *   Click the "Run" button in Android Studio to build and run the app.
 
@@ -18,4 +17,3 @@ Replace `YOUR_API_KEY` with your actual API key.
     *   `drawable/`: Image resources.
     *   `values/`: String resources, styles, etc.
 *   **`app/src/main/AndroidManifest.xml`:** The application manifest file.
-* **`google-services.json`:** The file that contains the API key for the google maps API.
