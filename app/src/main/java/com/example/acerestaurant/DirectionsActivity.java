@@ -1,6 +1,8 @@
 package com.example.acerestaurant;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,11 +32,24 @@ public class DirectionsActivity extends AppCompatActivity implements OnMapReadyC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         // Initialize the activity
         super.onCreate(savedInstanceState);
 
         // Set the content view
         setContentView(R.layout.activity_directions);
+
+        // Find the back button (Home Icon)
+        ImageButton backButton = findViewById(R.id.backButton);
+
+        // Set a click listener for the back button
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Finish the activity to go back
+                finish();
+            }
+        });
 
         // Get the SupportMapFragment and request notification when the map is ready to be used
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

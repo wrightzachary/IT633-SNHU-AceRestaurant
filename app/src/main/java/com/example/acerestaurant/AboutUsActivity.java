@@ -1,6 +1,9 @@
 package com.example.acerestaurant;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +29,18 @@ public class AboutUsActivity extends AppCompatActivity {
 
         // Set the content view
         setContentView(R.layout.activity_about_us);
+
+        // Find the back button (Home Icon)
+        ImageButton backButton = findViewById(R.id.backButton);
+
+        // Set a click listener for the back button
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Finish the activity to go back
+                finish();
+            }
+        });
 
         // Get the list of people
         List<com.example.acerestaurant.Person> people = com.example.acerestaurant.Person.getPeople();
