@@ -43,20 +43,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#333333"
-        android:padding="16dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="© 2023 Ace Restaurant - Zachary Wright"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"/>
-
-    </LinearLayout>
+    <!--    includes the footer layout-->
+    <include layout="@layout/activity_footer" />
 
 </LinearLayout>
